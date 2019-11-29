@@ -45,6 +45,7 @@ var stateText;
 var livingEnemies = [];
 
 function create() {
+  if (!game.device.desktop){ game.input.onDown.add(gofull, this); } //go fullscreen on mobile
   game.physics.startSystem(Phaser.Physics.ARCADE);
 
   //  The scrolling starfield background
